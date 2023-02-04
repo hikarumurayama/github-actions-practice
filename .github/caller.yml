@@ -1,0 +1,11 @@
+name: caller
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  execute:
+    uses: ./.github/workflows/common-flow.yml@main
+    with:
+      statement: "hello world"

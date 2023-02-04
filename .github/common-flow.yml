@@ -1,0 +1,16 @@
+name: "common-flow"
+
+on:
+  workflow_call:
+    inputs:
+        statement:
+          required: true
+          type: string
+
+jobs:
+    name: "common workflow"
+    runs-on: ubuntu-latest
+    steps:
+      - name: execution
+        run: |
+          echo ${{inputs.statement}}
