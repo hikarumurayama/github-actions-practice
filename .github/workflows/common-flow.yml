@@ -13,4 +13,5 @@ jobs:
   myjob:
     runs-on: ubuntu-20.04
     steps:
-      - run: echo ${{env.MERGED_ENV}}
+      - name: "名称は日本語でもいけるのか"
+        run: echo ${{env.MERGED_ENV}}
