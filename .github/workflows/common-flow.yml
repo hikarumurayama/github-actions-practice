@@ -8,6 +8,7 @@ on:
           type: string
 
 jobs:
+  common:
     name: "common workflow job"
     runs-on: ubuntu-latest
     steps:
