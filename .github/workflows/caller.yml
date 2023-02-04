@@ -9,3 +9,5 @@ jobs:
   call-workflow:
     needs: [myjob]
     uses: ./.github/workflows/common-flow.yml
+      with:
+        statement: hello world
