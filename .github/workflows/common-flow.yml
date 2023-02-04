@@ -1,17 +1,8 @@
-name: "common-flow"
-
+name: call
 on:
   workflow_call:
-    inputs:
-        statement:
-          required: true
-          type: string
-
 jobs:
-  common:
-    name: "common workflow job"
-    runs-on: ubuntu-latest
+  myjob:
+    runs-on: ubuntu-20.04
     steps:
-      - name: execution
-        run: |
-          echo ${{inputs.statement}}
+      - run: echo "HELLO CALL"

@@ -1,15 +1,11 @@
-name: caller
-
+name: main
 on:
   push:
-    branches: [main]
-
 jobs:
-  execute:
-    name: "caller job"
-    runs-on: ubuntu-latest
+  myjob:
+    runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3
-      - uses: ./.github/workflows/common-flow.yml@main
-        with:
-          statement: "hello world"
+      - run: echo "HELLO MAIN"
+  call-workflow:
+    needs: [myjob]
+    uses: ./.github/workflows/common-flow.yml
