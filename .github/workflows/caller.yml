@@ -7,7 +7,7 @@ jobs:
     steps:
       - run: echo "HELLO MAIN"
   call-workflow:
-    needs: [myjob]
+    # needs: [myjob]
     uses: ./.github/workflows/common-flow.yml
     with:
       statement: hello world
