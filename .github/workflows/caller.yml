@@ -2,12 +2,7 @@ name: main
 on:
   push:
 jobs:
-  myjob:
-    runs-on: ubuntu-20.04
-    steps:
-      - run: echo "HELLO MAIN"
   call-workflow:
-    # needs: [myjob]
     uses: ./.github/workflows/common-flow.yml
     with:
-      statement: hello world
+      statement: hello

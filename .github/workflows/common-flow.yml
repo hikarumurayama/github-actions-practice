@@ -6,8 +6,11 @@ on:
           required: true
           type: string
 
+env:
+  MERGED_ENV : "${{inputs.statement}} world"
+
 jobs:
   myjob:
     runs-on: ubuntu-20.04
     steps:
-      - run: echo ${{inputs.statement}}
+      - run: echo ${{env.MERGED_ENV}}
