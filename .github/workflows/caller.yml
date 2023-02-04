@@ -6,6 +6,7 @@ on:
 
 jobs:
   execute:
-    uses: ./.github/workflows/common-flow.yml@main
-    with:
-      statement: "hello world"
+    - uses: actions/checkout@v3
+    - uses: ./.github/workflows/common-flow.yml@main
+      with:
+        statement: "hello world"
